@@ -1,1 +1,65 @@
-T1MA
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Climate Change Visualization</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+<style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    .panel { margin: 20px; border: 1px solid #ddd; padding: 10px; }
+    #map { height: 300px; }
+</style>
+</head>
+<body>
+
+<div class="panel" id="historical-data">
+    <h2>GHG Emissions and Temperature Rise Since 1800s</h2>
+    <!-- D3.js or Chart.js for dynamic chart -->
+</div>
+
+<div class="panel" id="emission-projections">
+    <h2>Emission Projections vs. Necessary Reductions</h2>
+    <!-- Static or dynamic bar chart -->
+</div>
+
+<div class="panel" id="warming-impacts">
+    <h2>Impacts at 1.5°C vs. 2°C Warming</h2>
+    <!-- Comparison graphics -->
+</div>
+
+<div class="panel">
+    <h2>Vulnerable Regions</h2>
+    <div id="map"></div>
+</div>
+
+<div class="panel" id="adaptation-strategies">
+    <h2>Adaptation Strategies</h2>
+    <!-- Icons or infographics -->
+</div>
+
+<div class="panel" id="climate-agreements">
+    <h2>Key Climate Agreements</h2>
+    <!-- Timeline graphic -->
+</div>
+
+<div class="panel" id="ipcc-insights">
+    <h2>IPCC Insights and Action Urgency</h2>
+    <!-- Text blocks with key points and graphics -->
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+<script>
+    // Map for vulnerable regions
+    var map = L.map('map').setView([0, 0], 2);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Here you would add layers or markers for vulnerable regions
+    // Example: L.geoJSON(vulnerabilityData).addTo(map);
+
+    // Note: Actual data visualization for other panels would require D3.js, Chart.js, or similar libraries for dynamic content.
+</script>
+
+</body>
+</html>
